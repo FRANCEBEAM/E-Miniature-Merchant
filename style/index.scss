@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//PROPERTIES
+$font :'Oswald', sans-serif;
+
+//MAIN COLORS
+$orange:  #FF4800;
+$red: #FF2200;
+$black: #000000;
+$yellow: #EACA41;
+
+//SECONDARY COLORS
+$white: #FFFFFF;
+$blend-white: #D9D9D9;
+
+
+body{
+  font-family: $font;
+}
+
+//LETS CREATE NAVIGATION
+div.nav-wrapper{
+  background: $black;
+  padding: 1.7em 1em;
+  top: 0; 
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+    nav.nav{
+      display: flex;
+      div.nav-logo img{
+        width: 100%;
+      }
+    }
+
+    //HAMBURGER BUTTON
+    div.hamburger{
+      padding: 0 1em;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      .bar{
+        background: white;
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 3px auto;
+        border-radius: 4px;
+
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+      }
+    }
+
+    //ANIMATION
+    div.hamburger.active .bar:nth-child(2){
+      opacity: 0;
+    }
+    div.hamburger.active .bar:nth-child(1){
+     transform: translateY(8px) rotate(45deg);
+    }
+    div.hamburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+     }
+
+     .nav-menu{
+        position:relative;
+        margin: 5em auto;
+        line-height: 2.7em;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        transition: 0.3s;
+     }
+
+    .nav-menu.active{
+         display: block;
+    }
+
+    ul.nav-menu{
+        display: none;
+        li{
+          list-style: none;
+        }
+        li, a{
+          text-decoration: none;
+          color: $white;
+        }
+    }
+}
