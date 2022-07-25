@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +9,186 @@
   <title>Frogman</title>
 </head>
 <body>
-        <div class="nav-wrapper">
-              <nav class="nav">
-                    <div class="nav-logo">
-                          <img src="/img/logo.svg" alt="">
-                    </div>
-                        <div class="hamburger">
-                              <span class="bar"></span>
-                              <span class="bar"></span>
-                              <span class="bar"></span>
-                        </div>
-                      <ul class="nav-menu">
-                          <li class="nav-link"><a href="#">HOME</a></li>
-                          <li class="nav-link"><a href="#">MERCH</a></li>
-                          <li class="nav-link"><a href="#">MINIATURE</a></li>
-                          <li class="nav-link"><a href="#">GAME RULES</a></li>
-                      </ul>
-              </nav>
-        </div>
+  <nav class="nav">
+    <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+    <label for="nav__checkbox" class="nav__toggle">
+      <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+      </svg>
+      <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+      </svg>
+    </label>
+    <ul class="nav__menu">
+      <li class="logo"><a href="#">
+         <img src="/img/logo.svg" alt="">
+        </a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
         
       <div class="main-wrapper">
-        <img src="/img/hero-img.jpg" alt="">
-              <img src="/img/content-1.jpg" alt="">
+
+        <!--HERO CONTENT-->
+            <div class="hero-container">
+               <h1>THE DEFINITIVE CONFLICT BIBLE OF AWBARI</h1>
+               <p>97 PAGES OF DETAILED FULL COLOR ART AND INFORMATION
+                DETAILING THE NEWEST SERIES OF THE BEST SELLING MILITARY THRILLER</p>
+
+                  <div class="button-container">
+                      <div class="order-btn">
+                            <a href="#">ORDER NOW</a>
+                      </div>
+
+                         <div class="read-btn">
+                            <a href="#">READ COMICS</a>
+                      </div>
+                  </div>
+            </div>
+
+   <!--1ST CONTENT-->
+   <div class="first-container">
+        <div class="first-header">
+          <h1>LIMITED EDITION PRINT</h1>
+             <p>28 UNITS | HAND NUMBERED + SIGNED</p>
+        </div>
+        
+
+        <div class="product-container">
+              <div class="product-item">
+                    <img src="/img/morale-patches.png" alt="">        
+              </div>
+              <div class="product-item">
+                <img src="/img/apparel-shirts.png" alt="">
+          </div>
+          <div class="product-item">
+            <img src="/img/sticker packs.png" alt="">
+      </div>
+        </div>
+
+        <!-- PATCH LIST -->
+        <div class="patch-container">
+                  <div class="product-item">
+                        <img src="/img/patch1.jpg" alt="">        
+                  </div>
+                  <div class="product-item">
+                    <img src="/img/patch2.jpg" alt="">        
+              </div>
+              <div class="product-item">
+                <img src="/img/patch3.jpg" alt="">        
+          </div>
+          <div class="product-item">
+            <img src="/img/patch4.jpg" alt="">        
+      </div>  
+        </div>
+   </div>
+
+   <!-- 2ND CONTENT -->
+   <div class="second-container">
+    <div class="second-header">
+      <h1>COLD HARBOR SPECIAL OBJECTS GROUP APPAREL</h1>
+         <p>APPAREL & SHIRTS</p>
+    </div>
+    
+    <div class="product-container">
+          <div class="product-item">
+                <img src="/img/ct-scorch.png" alt="">   
+    
+                  <div class="card-info">
+                          <h1>CT SCORCH SILK LABEL</h1>
+                          <p>COTTON POLY APPAREL MW190 MIDWEIGHT WIDE HOODIE</p>
+                         <div class="selection">
+                              <label>SELECT SIZE COLOR</label>
+                              <select name="size">
+                                    <option value="sm">SM: 499</option>
+                                    <option value="md">MD: 588</option>
+                                    <option value="lg">L: 620</option>
+                                    <option value="lg">XL: 699</option>
+                              </select>
+                              <button type="submit">BUY</button>
+                         </div>
+                  </div>     
+          </div>
+
+          <div class="product-item">
+            <img src="/img/cold-harbor.png" alt="">
+
+              <div class="card-info">
+                <h1>COLD HARBOR SILK LABEL</h1>
+                <p>COTTON T-SHIRT APPAREL 2000 RINGRUN</p>
+              <div class="selection">
+                    <label>SELECT SIZE COLOR</label>
+                    <select name="size">
+                          <option value="sm">SM: 499</option>
+                          <option value="md">MD: 588</option>
+                          <option value="lg">L: 620</option>
+                          <option value="lg">XL: 699</option>
+                    </select>
+                    <button type="submit">BUY</button>
+              </div>
+        </div>     
+      </div>
+    </div>
+</div>
+
+<!-- THIRD CONTENT -->
+<div class="third-container">
+    <div class="third-head">
+          <h1>GAME COMPONENTS AND MINIATURES</h1>
+            <p>CLOSE COMBAT IN A FAILED STATE AT WAR</p>
+
+              <div class="card-container">
+                  <div class="card-header">
+                    <h2>PMC TROOP SCORCH</h2>
+                  </div>
+    
+                    <img src="/img/minia-1.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis libero libero aliquet lacus, eleifend egestas sagittis.</p>
+                    <button type="button">VIEW MORE</button>
+              </div>
+
+              <div class="card-container">
+                <div class="card-header">
+                  <h2>AYARI TROOP GUARD</h2>
+                </div>
+  
+                  <img src="/img/minia-2.png" alt="">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis libero libero aliquet lacus, eleifend egestas sagittis.</p>
+                  <button type="button">VIEW MORE</button>
+            </div>
+
+            <div class="card-container">
+              <div class="card-header">
+                <h2>CLOSE COMBAT ESSENTIALS</h2>
+              </div>
+
+                <img src="/img/minia-3.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis libero libero aliquet lacus, eleifend egestas sagittis.</p>
+                <button type="button">VIEW MORE</button>
+          </div>
+
+          <div class="card-container">
+            <div class="card-header">
+              <h2>RADIAL EFFECT TEMPLATE</h2>
+            </div>
+
+              <img src="/img/minia-4.png" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis libero libero aliquet lacus, eleifend egestas sagittis.</p>
+              <button type="button">VIEW MORE</button>
+        </div>
+
+    </div>
+</div>
+
+
       </div>
 
     <script src="/js/app.js"></script>
 </body>
 </html>
+
+
+
+

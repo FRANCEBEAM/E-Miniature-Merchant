@@ -1,9 +1,13 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
 
-*{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 //PROPERTIES
@@ -25,73 +29,328 @@ body{
 }
 
 //LETS CREATE NAVIGATION
-div.nav-wrapper{
+.nav {
   background: $black;
-  padding: 1.7em 1em;
+  padding: 1em 0;
   top: 0; 
   width: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
-    nav.nav{
-      display: flex;
-      div.nav-logo img{
-        width: 100%;
-      }
+  
+  &__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0em 1em;
+    right: 0;
+
+    svg {
+      width: 1.5rem;
+      fill: $white;
     }
 
-    //HAMBURGER BUTTON
-    div.hamburger{
-      padding: 0 1em;
-      cursor: pointer;
-      position: absolute;
-      right: 0;
-      .bar{
-        background: white;
+    .close {
+      display: none;
+      padding: 1em 0;
+    }
+
+    .menu {
+      padding: 1em 0;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    padding: 1em 1em;
+
+    li {
+      list-style: none;
+      display: none;
+      color: $white;
+
+      &:first-child {
+        margin-right: auto;
         display: block;
-        width: 30px;
-        height: 4px;
-        margin: 3px auto;
-        border-radius: 4px;
-
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-
       }
     }
 
-    //ANIMATION
-    div.hamburger.active .bar:nth-child(2){
-      opacity: 0;
-    }
-    div.hamburger.active .bar:nth-child(1){
-     transform: translateY(8px) rotate(45deg);
-    }
-    div.hamburger.active .bar:nth-child(3){
-      transform: translateY(-8px) rotate(-45deg);
-     }
-
-     .nav-menu{
-        position:relative;
-        margin: 5em auto;
-        line-height: 2.7em;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        transition: 0.3s;
-     }
-
-    .nav-menu.active{
-         display: block;
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.2rem;
     }
 
-    ul.nav-menu{
-        display: none;
-        li{
-          list-style: none;
-        }
-        li, a{
-          text-decoration: none;
-          color: $white;
-        }
+    svg {
+      width: 1.5rem;
+      fill: $black;
     }
+  }
 }
+
+// Toggle the hamburger menu in mobile view
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+
+//Change from menu to close icon on tap
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+
+
+//HERO - CONTENT
+div.main-wrapper{
+  width: 100%;
+  height: 100vh;
+    div.hero-container{
+       background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5)50%),url(/img/hero-img.jpg);
+       height: 100vh;
+       min-width:100%;
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    h1{
+      display: flex;
+      padding-top: 6em;
+      text-align: center;
+      font-size: 2.4rem;
+      min-width: 80%;
+      align-items: center;
+      color:$white;
+    }
+    p{
+      display: flex;
+      text-align: center;
+      font-size: 1rem;
+      min-width: 80%;
+      font-weight: 400px;
+      margin: 0 1em;
+      padding-top: 2em;
+      text-align: center;
+      color:$white;
+    }
+
+    div.button-container{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 4em;
+      min-width: 80%;
+      align-items: center;
+
+        div.order-btn a{
+          display: flex;
+          justify-content: center;
+          min-width: 12vw;
+          padding: 1em 1.4em;
+          background: $yellow;
+          color: $black;
+          text-decoration: none;
+          border-radius: 4px;
+          font-size: 19px;
+          text-align: center;
+          align-items: center;
+          font-weight: 800;
+        }
+
+        div.read-btn a{
+          justify-content: center;
+          display: flex;
+          min-width: 12vw;
+          padding: 1.1em 1.4em;
+          text-align: center;
+          align-items: center;
+          border: 2px $white solid;
+          color: $white;
+          text-decoration: none;
+          border-radius: 4px;
+          font-size: 17px;
+          font-weight: 800;
+        }
+    }
+ }
+
+ //FIRST CONTENT
+ div.first-container{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5)50%),url(/img/content-1.jpg);
+
+  padding: 0 1em;
+      div.first-header h1{
+        display: flex;
+        font-size: 1.7rem;
+        min-width: 80%;
+        padding-top: 1.4em;
+      }
+
+      p{
+        font-size: 1rem;
+        padding: 0;
+        margin: 1em 0 3em;
+      }
+
+      div.product-container{
+            div.product-item img{
+              width: 100%;
+              margin-bottom: 1em;
+              cursor: pointer;
+            }
+      }
+
+      div.patch-container{
+        display: none;
+      }
+ }
+
+ //SECOND CONTENT
+ div.second-container{
+  padding: 0 1em;
+  background: $black;
+
+      div.second-header h1{
+        display: flex;
+        text-align: left;
+        font-size: 1.7rem;
+        min-width: 80%;
+        padding-top: 1.4em;
+      }
+
+      p{
+        font-size: 1rem;
+        padding: 0;
+        margin: 1em 0 3em;
+      }
+
+      div.product-container{
+          div.product-item{
+            margin: 0;
+          }
+
+            div.product-item img{
+              width: 100%;
+              cursor: pointer;
+            }
+
+           div.card-info{
+              padding: 0;
+              h1{
+                text-align: left;
+                  font-size: 30px;
+                  padding: 0;
+              }
+              p{
+                font-size: 14px;
+                padding-bottom: 1em;
+                margin: 0;
+                text-align: left;
+              }
+              div.selection{
+                padding: 1em;
+                background: $yellow;
+                label{
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+                select{
+                 padding: .7em 1.4em;
+                }
+                button{
+                  cursor: pointer;
+                  padding: .7em 1em;
+                  background: $orange;
+                  color: $white;
+                  border-radius: 4px;
+                  border: solid 1px $black;
+                }
+
+              }
+           }
+      }
+
+      div.patch-container{
+        display: none;
+      }
+ }
+
+ //THIRD CONTENT
+div.third-container{
+      width: 100%;
+      height: 220vh;
+      padding: 0 1em;
+       background: $black;
+      div.third-head h1{
+        display: flex;
+        text-align: left;
+        font-size: 1.7rem;
+        min-width: 80%;
+        padding-top: 1.4em;
+      }
+
+      p{
+        font-size: 1rem;
+        padding: 0;
+        margin: 1em 0 3em;
+      }
+
+      div.card-container{         
+        padding: 1em; 
+        text-align: center;
+        align-items: center;
+        background: #121212;
+        margin-bottom: 2em;
+        .card-header{
+          h2{
+            color: $white;
+            text-align: center;
+            align-items: center;
+            margin-bottom: .4em;
+          }
+        }
+        p{
+          font-size: 16px;
+        }
+        button{
+          background: $red;
+          padding: .7em 4em;
+          color: $white;
+          font-size: 16px;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+        }
+      }
+  }
+
+
+
+
+
+
+
+
+// Desktop view
+@media only screen and (min-width: 560px) {
+  .nav {
+    &__toggle {
+      display: none;
+    }
+
+    &__menu {
+      flex-direction: row;
+
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
