@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 //PROPERTIES
 $font :'Oswald', sans-serif;
 
@@ -141,41 +145,51 @@ div.main-wrapper{
       color:$white;
     }
 
+    //HERO - CONTENT BUTTONS
     div.button-container{
       display: flex;
       justify-content: space-around;
       margin-top: 4em;
-      min-width: 80%;
       align-items: center;
-
+      // max-width: 100%;
+      // div.order-btn{
+      //     display: flex;
+      //     width: 100%;
+      // }
         div.order-btn a{
           display: flex;
           justify-content: center;
-          min-width: 12vw;
-          padding: 1em 1.4em;
+          // min-width: 14vw;
+          padding: 1.4em 1.7em;
           background: $yellow;
           color: $black;
           text-decoration: none;
           border-radius: 4px;
-          font-size: 19px;
+          font-size: 18px;
           text-align: center;
           align-items: center;
           font-weight: 800;
+
+          width: 150px;
+          min-width: 100%;
         }
 
         div.read-btn a{
           justify-content: center;
           display: flex;
-          min-width: 12vw;
-          padding: 1.1em 1.4em;
+          // min-width: 14vw;
+          padding: 1.4em 1.7em;
           text-align: center;
           align-items: center;
           border: 2px $white solid;
           color: $white;
           text-decoration: none;
           border-radius: 4px;
-          font-size: 17px;
+          font-size: 16px;
           font-weight: 800;
+
+          width: 150px;
+          min-width: 100%;
         }
     }
  }
@@ -284,7 +298,6 @@ div.main-wrapper{
  //THIRD CONTENT
 div.third-container{
       width: 100%;
-      height: 220vh;
       padding: 0 1em;
        background: $black;
       div.third-head h1{
@@ -299,6 +312,10 @@ div.third-container{
         font-size: 1rem;
         padding: 0;
         margin: 1em 0 3em;
+      }
+
+      div.card-list{
+        padding-bottom: 2em;
       }
 
       div.card-container{         
@@ -330,14 +347,266 @@ div.third-container{
       }
   }
 
+  //FOURTH CONTENT
+  div.fourth-container{
+    background: #D9D9D9;
+    padding: 0 1em;
+      .the-basics{
+          padding: 0;
+          margin: 0;
+          .left-basics img{
+            display: none;
+         
+          }
+          .right-basics .right-header{
+                p.infil{
+                  margin: 0;
+                  // padding: 0 .5em;
+                  font-size: 24px;
+                  font-weight: 500;
+                  color: $black;
+                }
+                h1{
+                  // padding: 0 .4em;
+                  padding-top: 0;
+                  background: $black;
+                  font-size: 32px;
+                  color: $orange;
+                }
+                h2{
+                  // padding: 0 .7em;
+                  font-size: 20px;
+                }
+                p{
+                  color: $black;
+                }
+          }
+
+          .right-basics{
+            padding: 0;
+            p{
+              color: $black;
+              text-align: left;
+              margin-left: 0;
+              align-items: center;
+            }
+
+            div.plus-container {
+              p{
+                font-weight: 300;
+              }
+                i{
+                    margin-right: .7em;
+                }
+            }
+          }
+      }
+  }
+
+  //FIFTH-CONTAINER
+  div.fifth-container{
+      padding: 0 1em;
+      background: #D9D9D9;
+      padding-bottom: 17em;
+
+      .unitrole-container{
+          .unitrole-header{
+            p.ope{
+                margin: 0;
+                  font-size: 24px;
+                  font-weight: 500;
+                  color: $black;
+            } 
+            div.box-basic{
+                  h1{
+                    padding-top: 0;
+                    font-size: 32px;
+                    color: $orange;
+                  }
+                  background: $black;
+            }
+          }
+
+          .unit-description{
+            p{
+              margin: 0;
+              text-align: left;
+              color: $black;
+            }
+          }
+
+          .important-box{
+            background: $red;
+            color: $black;
+
+              h1{
+                text-align: left;
+                padding: 0;
+                margin: 1em;
+                color: $black;
+                font-size: 16px;
+              }
+          
+          }
+
+          div.right-content{
+
+              .success-container{
+                background: $black;
+                border-top: #FF4800 solid 17px;
+                padding: 2em;
+                  .success-header{
+                    padding: 0 1em;
+                      h1{
+                        padding: 0;
+                        font-size: 32px;
+                        color: $orange;
+                      }
+                      p.setup{
+                        margin: 0;
+                        color: $orange;
+                      }
+                      p.players{
+                        margin: 0;
+                        color: $orange;
+                      }
+                  }
+
+                  .players-para p{
+                    text-align: left;
+                  }
+                  .success-para{
+                    p{
+                      text-align: left;
+                      color: $white;
+                    }
+                  }
+              }
+
+              .org-container{
+                padding: 2em;
+                background: $black;
+                border-top: #FF4800 solid 17px;
+                  .success-header{
+                    padding: 0 1em;
+                      h1{
+                        padding: 0;
+                        font-size: 32px;
+                        color: $orange;
+                      }
+                      p.org{
+                        margin: 0;
+                        color: $orange;
+                      }
+                  }
+                  .org-para{
+                    p{
+                      text-align: left;
+                      color: $white;
+                    }
+                  }
+              }
+
+              .effects-container{
+                padding: 2em;
+                background: $black;
+                border-top: #FF4800 solid 17px;
+                  .success-header{
+                    padding: 0 1em;
+                      h1{
+                        padding: 0;
+                        font-size: 32px;
+                        color: $orange;
+                      }
+                  }
+                  .effects-para{
+                    p{
+                      text-align: left;
+                      color: $white;
+                    }
+                  }
+              }
+          }
+      }
+  }
+
+    //FIFTH-CONTAINER
+    div.footer-container{
+      background: $black;
+      padding: 0 1em;
+        footer{
+          div.left-content{
+              .link-support{
+                padding-top: 2em;
+                padding-bottom: 2em;
+                text-align: center;
+                a{
+                  font-size: 18px;
+                  text-decoration: none;
+                  color: $white;
+                  font-weight: bold;
+                }
+              }
+
+              div.social{
+                color: white;
+                font-size: 24px;
+                text-align: center;
+                justify-content: space-between;
+                i{
+                  padding: 0 .4em;
+                }
+              }
+          }
+
+          div.right-content{
+            padding-top: 4em;
+            h1{
+              padding: 0;
+              margin: 0;
+            }
+
+            .link-item{
+              a{
+                text-decoration: none;
+                color: $white;
+              }
+              p{
+                margin: 0;
+              }
+            }
+
+          }
+        }
+    }
 
 
+//530 PX SEMI PHONE VIEW
+@media only screen and (min-width: 530px){
+  div.hero-container{
+    h1{
+      font-size: 46px;
+    }
+    p{
+      font-size: 26px;
+    }
+    div.button-container{
+      .order-btn{
+        display: block;
+       min-width: 44%;
+      
+      }
+      
+      .read-btn{
+        display: block;
+         min-width: 44%;
 
+      }
+    }
+}
+}
 
-
-
-
-// Desktop view
+// HAMBURGER MENU DESKTOP VIEW
 @media only screen and (min-width: 560px) {
   .nav {
     &__toggle {
@@ -354,3 +623,372 @@ div.third-container{
   }
 }
 
+// 768 TABLET VIEW
+@media only screen and(min-width: 768px){
+
+   div.first-container{ 
+      div.first-header{
+        h1{
+          font-size: 2rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+      }
+    }
+
+    div.product-container{
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+    }
+
+      div.second-container{
+        div.second-header{
+          h1{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 1rem;
+          }
+        }
+    }
+
+    div.third-container{
+        div.third-head{
+          h1{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 1rem;
+          }
+        }
+
+        div.card-list{
+            // display: flex;
+            // justify-content: space-between;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+        }
+
+          // div.card-container{
+          //   width: 50%;
+          // }
+    }
+
+    div.fourth-container{
+        div.the-basics{
+            .right-basics{
+              .right-header{
+                  p.infil{
+                    font-size: 2rem;
+                  }
+                  h1{
+                    font-size: 3rem;
+                  }
+              }
+            }
+        }
+    }
+
+    div.fifth-container{
+      div.unitrole-container{
+        div.unitrole-header{
+          p.ope{
+            font-size: 2rem;
+          }
+          .box-basic{
+            h1{
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+    div.footer-container{
+        footer{
+
+          div.right-content{
+               gap: 4em;
+               justify-content: center;
+             
+              display: flex;
+          }
+        }
+    }
+  }
+  
+  @media only screen  and (min-width: 819px){
+
+    div.hero-container{
+      height: 100%;
+      h1{
+        font-size: 3rem;
+      }
+      p{
+        font-size: 2rem;
+      }
+
+      div.button-container{
+        div.order-btn {
+          width: 20px;
+          a{
+            font-size: 20px;
+          }
+        }
+        div.read-btn {
+          a{
+            font-size: 20px;
+          }
+        }
+        
+      }
+    }
+  }
+
+  @media only screen  and (min-width: 849px){
+
+    div.hero-container{
+      width: 100%;
+      height: 100vh;
+      padding: 0 4em;
+
+        h1{
+          font-size: 3rem;
+        }
+    }
+
+  }
+
+  @media only screen and (min-width: 1200px){
+
+    div.hero-container{
+      padding-top: 0;
+      h1{
+        margin: 0;
+        padding-top: 4em;
+        font-size: 70px;
+        text-align: left;
+      } 
+      p{
+        font-size: 27px;
+        margin: 0;
+        text-align: left;
+      } 
+
+      div.button-container{
+        width: 420px;
+        font-size: 26px;
+      }
+    }
+
+
+    div.first-container{
+      div.first-header{
+        h1{
+          font-size: 40px;
+        }
+        p{
+          font-size: 30px;
+        }
+      }
+
+      div.patch-container{
+        display: flex;
+        gap: 1em;
+
+        div.product-item {
+          background: $black;
+          margin-bottom: 4em;
+          img{
+            width: 100%;
+          }
+          .card-info{
+            padding: 0 1em;
+            padding-bottom: 2em;
+            p{
+              font-size: 20px;
+              margin: 0;
+              padding-bottom: 1em;
+            }
+            h1{
+              padding-top: 0;
+              padding-bottom: 1em;
+              text-align: left;
+              font-size: 24px;
+            }
+
+            button{
+              padding: 1em;
+              background: $yellow;
+              color: $black;
+              font-weight: 800;
+              border: none;
+              cursor: pointer;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    div.second-container{
+      div.second-header{
+        h1{
+          font-size: 40px;
+        }
+        p{
+          font-size: 30px;
+        }
+      }
+
+      div.product-item{
+        div.card-info{
+          div.selection{
+            label{
+              font-size: 30px;
+            }
+            select{
+              width: 77%;
+              padding: 1em;
+            }
+            button{
+              width: 20%;
+              padding: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    div.third-container{
+      div.third-head{
+        h1{
+          font-size: 40px;
+        }
+        p{
+          font-size: 30px;
+        }
+      }
+
+      div.card-list{
+        padding: 0 1em;
+        div.card-container{
+          h2{
+            font-size: 30px;
+          }
+          p{
+            font-size: 20px;
+          }
+          button{
+            padding: 1.4em 3em;
+          }
+        }
+      }
+    }
+
+    div.fourth-container{
+      padding-top: 2em;
+      div.the-basics{
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        div.left-basics{
+          img{
+            width: 100%;
+            display: block;
+          }
+        }
+        div.right-basics{
+          padding-left: 1em;
+        }
+      }
+    }
+
+    div.fifth-container{
+      div.unitrole-container{
+        display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          div.right-content{
+            padding-top: 4em;
+            padding-left: 1em;
+          }
+      }
+    }
+
+    div.footer-container{
+      footer{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+          align-items: center;
+          div.left-content{
+              padding: 0;
+              margin: 0;
+              div.link-support{
+                padding-top: 0;
+                margin: 0;
+              }
+              div.social{
+                padding: 0 1em;
+                justify-content: left;
+
+              }
+          }
+
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1415px){
+
+        .nav__menu{
+          padding: 2em 8em;
+        }
+
+        //HERO CONTENT
+        div.hero-container{
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          padding: 0 8em;
+            .title{
+                h1{
+                  padding-top: 2.4em;
+                }
+            }
+        }
+
+        // FIRST CONTENT
+        div.first-container{
+          padding: 0 8em;
+        }
+
+        //SECOND CONTENT
+        div.second-container{
+          padding: 0 8em;
+        }
+
+        //THIRD CONTENT
+        div.third-container{
+          padding: 0 8em;
+        }
+
+        //FOURTH CONTENT
+        div.fourth-container{
+          padding: 4em 8em;
+        }
+
+       //FIFTH CONTENT
+        div.fifth-container{
+          padding: 0 8em;
+          padding-bottom: 12em;
+        }
+
+        //FOOTER
+        div.footer-container{
+          padding: 0 8em;
+        }
+  }
