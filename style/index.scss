@@ -438,6 +438,9 @@ div.third-container{
           .important-box{
             background: $red;
             color: $black;
+            padding: 1em;
+            margin-top: 2em;
+            margin-bottom: 2em;
 
               h1{
                 text-align: left;
@@ -458,6 +461,7 @@ div.third-container{
                   .success-header{
                     padding: 0 1em;
                       h1{
+                        text-align: left;
                         padding: 0;
                         font-size: 32px;
                         color: $orange;

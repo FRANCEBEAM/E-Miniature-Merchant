@@ -351,6 +351,9 @@ div.fifth-container .unitrole-container .unit-description p {
 div.fifth-container .unitrole-container .important-box {
   background: #FF2200;
   color: #000000;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 div.fifth-container .unitrole-container .important-box h1 {
   text-align: left;
@@ -368,6 +371,7 @@ div.fifth-container .unitrole-container div.right-content .success-container .su
   padding: 0 1em;
 }
 div.fifth-container .unitrole-container div.right-content .success-container .success-header h1 {
+  text-align: left;
   padding: 0;
   font-size: 32px;
   color: #FF4800;
